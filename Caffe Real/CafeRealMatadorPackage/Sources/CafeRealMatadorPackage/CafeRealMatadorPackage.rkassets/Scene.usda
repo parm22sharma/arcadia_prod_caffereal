@@ -1,0 +1,453 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["", "", "ParticleEmitter", "Cheeseburger"]
+    def "Cheeseburger" (
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0)
+        }
+        references = @Cheeseburger.usdz@
+    )
+    {
+        reorder nameChildren = ["", "", "", "ParticleEmitter", "geom", "Looks"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0.2, 0.01, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "geom" (
+            customData = {
+                float3 rotationEulerHint = (0, -0.7968286, 0)
+            }
+        )
+        {
+        }
+
+        def Xform "ParticleEmitter"
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (-0.000011444092, 7.0000014, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Component "VFXEmitter"
+            {
+                token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token birthDirection = "Normal"
+                    token birthLocation = "Surface"
+                    float3 birthLocationVertex = (0, 1, 0)
+                    float3 emissionDirection = (0, 1, 0)
+                    double emissionDuration = 4
+                    double emissionDurationVariation = 0.3
+                    token emitterShape = "Plane"
+                    double idleDuration = 0
+                    double idleDurationVariation = 0
+                    bool isLocal = 0
+                    bool isSpawningEnabled = 0
+                    bool loops = 1
+                    float particleSpeed = 0.1
+                    float particleSpeedVariation = 0
+                    float3 shapeSize = (0.04, 0.05, 0.04)
+                    bool spawnInheritParentColor = 0
+                    token spawnOccasion = "OnDeath"
+                    float spawnSpreadFactor = 0
+                    float spawnSpreadFactorVariation = 0
+                    float spawnVelocityFactor = 1
+                    double warmupDuration = 0
+
+                    def Struct "mainEmitter"
+                    {
+                        float3 acceleration = (0, 0.1, 0)
+                        token animationRepeatMode = "Looping"
+                        float3 billboardAxis = (0, 1, 0)
+                        token billboardMode = "Billboard"
+                        float birthRate = 30
+                        float birthRateVariation = 0
+                        token blendMode = "Alpha"
+                        float colorEvolutionPower = 1
+                        int64 columnCount = 4
+                        float dampingFactor = 4
+                        float4 endColorA = (0.3608705, 0.3608705, 0.3608705, 0.01)
+                        float4 endColorB = (0.4498603, 0.4498603, 0.4498603, 0.01)
+                        float frameRate = 0
+                        float frameRateVariation = 0
+                        int64 initialFrame = 2
+                        int64 initialFrameVariation = 6
+                        bool isAnimated = 1
+                        bool isLightingEnabled = 0
+                        float noiseAnimationSpeed = 0
+                        float noiseScale = 10
+                        float noiseStrength = 0.04
+                        token opacityOverLife = "GradualFadeInOut"
+                        float particleAngle = 0
+                        float particleAngleVariation = 0
+                        float particleAngularVelocity = 0
+                        float particleAngularVelocityVariation = 1
+                        float particleBounce = 0.3
+                        float particleFriction = 50
+                        asset particleImage = @ParticleEmitterPresetTextures/dustsheet.exr@
+                        double particleLifeSpan = 4
+                        double particleLifeSpanVariation = 0.3
+                        float particleMass = 10
+                        float particleMassVariation = 0
+                        float particleSize = 0.01
+                        float particleSizeVariation = 0.005
+                        float3 radialGravityCenter = (0, -0.1, 0)
+                        float radialGravityStrength = 0
+                        int64 rowCount = 4
+                        float sizeMultiplierAtEndOfLifespan = 7
+                        float sizeMultOverLife = 0.1
+                        float sizeMultOverLifePower = 0.1
+                        token sortOrder = "DecreasingDepth"
+                        float spreadingAngle = 0
+                        float4 startColorA = (0.3313278, 0.3313278, 0.3313278, 0.10307186)
+                        float4 startColorB = (0.35910377, 0.35910377, 0.35910377, 0.15953763)
+                        float stretchFactor = 0
+                        bool useEndColor = 1
+                        bool useEndColorRange = 1
+                        bool useStartColorRange = 1
+                        float3 vortexDirection = (0, 1, 0)
+                        float vortexStrength = 0
+                    }
+
+                    def Struct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def "FrenchFries" (
+        active = true
+        references = @FrenchFries.usdz@
+    )
+    {
+        reorder nameChildren = ["", "", "", "ParticleEmitter", "geom", "Looks"]
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-0.2, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "ParticleEmitter"
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0.0000038146973, 10, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Component "VFXEmitter"
+            {
+                token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token birthDirection = "Normal"
+                    token birthLocation = "Surface"
+                    float3 birthLocationVertex = (0, 1, 0)
+                    float3 emissionDirection = (0, 1, 0)
+                    double emissionDuration = 4
+                    double emissionDurationVariation = 0.3
+                    token emitterShape = "Plane"
+                    double idleDuration = 0
+                    double idleDurationVariation = 0
+                    bool isLocal = 0
+                    bool isSpawningEnabled = 0
+                    bool loops = 1
+                    float particleSpeed = 0.1
+                    float particleSpeedVariation = 0
+                    float3 shapeSize = (0.04, 0.05, 0.04)
+                    bool spawnInheritParentColor = 0
+                    token spawnOccasion = "OnDeath"
+                    float spawnSpreadFactor = 0
+                    float spawnSpreadFactorVariation = 0
+                    float spawnVelocityFactor = 1
+                    double warmupDuration = 0
+
+                    def Struct "mainEmitter"
+                    {
+                        float3 acceleration = (0, 0.1, 0)
+                        token animationRepeatMode = "Looping"
+                        float3 billboardAxis = (0, 1, 0)
+                        token billboardMode = "Billboard"
+                        float birthRate = 30
+                        float birthRateVariation = 0
+                        token blendMode = "Alpha"
+                        float colorEvolutionPower = 1
+                        int64 columnCount = 4
+                        float dampingFactor = 4
+                        float4 endColorA = (0.3608705, 0.3608705, 0.3608705, 0.01)
+                        float4 endColorB = (0.4498603, 0.4498603, 0.4498603, 0.01)
+                        float frameRate = 0
+                        float frameRateVariation = 0
+                        int64 initialFrame = 2
+                        int64 initialFrameVariation = 6
+                        bool isAnimated = 1
+                        bool isLightingEnabled = 0
+                        float noiseAnimationSpeed = 0
+                        float noiseScale = 10
+                        float noiseStrength = 0.04
+                        token opacityOverLife = "GradualFadeInOut"
+                        float particleAngle = 0
+                        float particleAngleVariation = 0
+                        float particleAngularVelocity = 0
+                        float particleAngularVelocityVariation = 1
+                        float particleBounce = 0.3
+                        float particleFriction = 50
+                        asset particleImage = @ParticleEmitterPresetTextures/dustsheet.exr@
+                        double particleLifeSpan = 4
+                        double particleLifeSpanVariation = 0.3
+                        float particleMass = 10
+                        float particleMassVariation = 0
+                        float particleSize = 0.01
+                        float particleSizeVariation = 0.005
+                        float3 radialGravityCenter = (0, -0.1, 0)
+                        float radialGravityStrength = 0
+                        int64 rowCount = 4
+                        float sizeMultiplierAtEndOfLifespan = 7
+                        float sizeMultOverLife = 0.1
+                        float sizeMultOverLifePower = 0.1
+                        token sortOrder = "DecreasingDepth"
+                        float spreadingAngle = 0
+                        float4 startColorA = (0.3313278, 0.3313278, 0.3313278, 0.10307186)
+                        float4 startColorB = (0.35910377, 0.35910377, 0.35910377, 0.15953763)
+                        float stretchFactor = 0
+                        bool useEndColor = 1
+                        bool useEndColorRange = 1
+                        bool useStartColorRange = 1
+                        float3 vortexDirection = (0, 1, 0)
+                        float vortexStrength = 0
+                    }
+
+                    def Struct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def "HotDog" (
+        active = true
+        references = @HotDog.usdz@
+    )
+    {
+        reorder nameChildren = ["", "", "", "ParticleEmitter", "geom", "Looks"]
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-0.4, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "ParticleEmitter"
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0.000011444092, 4, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Component "VFXEmitter"
+            {
+                token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token birthDirection = "Normal"
+                    token birthLocation = "Surface"
+                    float3 birthLocationVertex = (0, 1, 0)
+                    float3 emissionDirection = (0, 1, 0)
+                    double emissionDuration = 4
+                    double emissionDurationVariation = 0.3
+                    token emitterShape = "Plane"
+                    double idleDuration = 0
+                    double idleDurationVariation = 0
+                    bool isLocal = 0
+                    bool isSpawningEnabled = 0
+                    bool loops = 1
+                    float particleSpeed = 0.1
+                    float particleSpeedVariation = 0
+                    float3 shapeSize = (0.04, 0.05, 0.04)
+                    bool spawnInheritParentColor = 0
+                    token spawnOccasion = "OnDeath"
+                    float spawnSpreadFactor = 0
+                    float spawnSpreadFactorVariation = 0
+                    float spawnVelocityFactor = 1
+                    double warmupDuration = 0
+
+                    def Struct "mainEmitter"
+                    {
+                        float3 acceleration = (0, 0.1, 0)
+                        token animationRepeatMode = "Looping"
+                        float3 billboardAxis = (0, 1, 0)
+                        token billboardMode = "Billboard"
+                        float birthRate = 30
+                        float birthRateVariation = 0
+                        token blendMode = "Alpha"
+                        float colorEvolutionPower = 1
+                        int64 columnCount = 4
+                        float dampingFactor = 4
+                        float4 endColorA = (0.3608705, 0.3608705, 0.3608705, 0.01)
+                        float4 endColorB = (0.4498603, 0.4498603, 0.4498603, 0.01)
+                        float frameRate = 0
+                        float frameRateVariation = 0
+                        int64 initialFrame = 2
+                        int64 initialFrameVariation = 6
+                        bool isAnimated = 1
+                        bool isLightingEnabled = 0
+                        float noiseAnimationSpeed = 0
+                        float noiseScale = 10
+                        float noiseStrength = 0.04
+                        token opacityOverLife = "GradualFadeInOut"
+                        float particleAngle = 0
+                        float particleAngleVariation = 0
+                        float particleAngularVelocity = 0
+                        float particleAngularVelocityVariation = 1
+                        float particleBounce = 0.3
+                        float particleFriction = 50
+                        asset particleImage = @ParticleEmitterPresetTextures/dustsheet.exr@
+                        double particleLifeSpan = 4
+                        double particleLifeSpanVariation = 0.3
+                        float particleMass = 10
+                        float particleMassVariation = 0
+                        float particleSize = 0.01
+                        float particleSizeVariation = 0.005
+                        float3 radialGravityCenter = (0, -0.1, 0)
+                        float radialGravityStrength = 0
+                        int64 rowCount = 4
+                        float sizeMultiplierAtEndOfLifespan = 7
+                        float sizeMultOverLife = 0.1
+                        float sizeMultOverLifePower = 0.1
+                        token sortOrder = "DecreasingDepth"
+                        float spreadingAngle = 0
+                        float4 startColorA = (0.3313278, 0.3313278, 0.3313278, 0.10307186)
+                        float4 startColorB = (0.35910377, 0.35910377, 0.35910377, 0.15953763)
+                        float stretchFactor = 0
+                        bool useEndColor = 1
+                        bool useEndColorRange = 1
+                        bool useStartColorRange = 1
+                        float3 vortexDirection = (0, 1, 0)
+                        float vortexStrength = 0
+                    }
+
+                    def Struct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def "PizzaSlice" (
+        active = true
+        references = @PizzaSlice.usdz@
+    )
+    {
+        reorder nameChildren = ["", "", "", "ParticleEmitter", "geom", "Looks"]
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "ParticleEmitter"
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 3, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Component "VFXEmitter"
+            {
+                token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    token birthDirection = "Normal"
+                    token birthLocation = "Surface"
+                    float3 birthLocationVertex = (0, 1, 0)
+                    float3 emissionDirection = (0, 1, 0)
+                    double emissionDuration = 4
+                    double emissionDurationVariation = 0.3
+                    token emitterShape = "Plane"
+                    double idleDuration = 0
+                    double idleDurationVariation = 0
+                    bool isLocal = 0
+                    bool isSpawningEnabled = 0
+                    bool loops = 1
+                    float particleSpeed = 0.1
+                    float particleSpeedVariation = 0
+                    float3 shapeSize = (0.04, 0.05, 0.04)
+                    bool spawnInheritParentColor = 0
+                    token spawnOccasion = "OnDeath"
+                    float spawnSpreadFactor = 0
+                    float spawnSpreadFactorVariation = 0
+                    float spawnVelocityFactor = 1
+                    double warmupDuration = 0
+
+                    def Struct "mainEmitter"
+                    {
+                        float3 acceleration = (0, 0.1, 0)
+                        token animationRepeatMode = "Looping"
+                        float3 billboardAxis = (0, 1, 0)
+                        token billboardMode = "Billboard"
+                        float birthRate = 30
+                        float birthRateVariation = 0
+                        token blendMode = "Alpha"
+                        float colorEvolutionPower = 1
+                        int64 columnCount = 4
+                        float dampingFactor = 4
+                        float4 endColorA = (0.3608705, 0.3608705, 0.3608705, 0.01)
+                        float4 endColorB = (0.4498603, 0.4498603, 0.4498603, 0.01)
+                        float frameRate = 0
+                        float frameRateVariation = 0
+                        int64 initialFrame = 2
+                        int64 initialFrameVariation = 6
+                        bool isAnimated = 1
+                        bool isLightingEnabled = 0
+                        float noiseAnimationSpeed = 0
+                        float noiseScale = 10
+                        float noiseStrength = 0.04
+                        token opacityOverLife = "GradualFadeInOut"
+                        float particleAngle = 0
+                        float particleAngleVariation = 0
+                        float particleAngularVelocity = 0
+                        float particleAngularVelocityVariation = 1
+                        float particleBounce = 0.3
+                        float particleFriction = 50
+                        asset particleImage = @ParticleEmitterPresetTextures/dustsheet.exr@
+                        double particleLifeSpan = 4
+                        double particleLifeSpanVariation = 0.3
+                        float particleMass = 10
+                        float particleMassVariation = 0
+                        float particleSize = 0.01
+                        float particleSizeVariation = 0.005
+                        float3 radialGravityCenter = (0, -0.1, 0)
+                        float radialGravityStrength = 0
+                        int64 rowCount = 4
+                        float sizeMultiplierAtEndOfLifespan = 7
+                        float sizeMultOverLife = 0.1
+                        float sizeMultOverLifePower = 0.1
+                        token sortOrder = "DecreasingDepth"
+                        float spreadingAngle = 0
+                        float4 startColorA = (0.3313278, 0.3313278, 0.3313278, 0.10307186)
+                        float4 startColorB = (0.35910377, 0.35910377, 0.35910377, 0.15953763)
+                        float stretchFactor = 0
+                        bool useEndColor = 1
+                        bool useEndColorRange = 1
+                        bool useStartColorRange = 1
+                        float3 vortexDirection = (0, 1, 0)
+                        float vortexStrength = 0
+                    }
+
+                    def Struct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

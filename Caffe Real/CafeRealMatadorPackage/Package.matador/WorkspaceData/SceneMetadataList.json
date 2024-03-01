@@ -1,0 +1,68 @@
+{
+  "AA6B9D3C-B738-4E84-AA0D-F20A10936D35" : {
+    "cameraTransform" : [
+      -0.99836963415145874,
+      2.5008139559190568e-08,
+      -0.057078875601291656,
+      0,
+      -0.0088021447882056236,
+      0.98803806304931641,
+      0.15395885705947876,
+      0,
+      0.056396007537841797,
+      0.15421047806739807,
+      -0.9864271879196167,
+      0,
+      0.013851755298674107,
+      0.43388858437538147,
+      -0.93373924493789673,
+      1
+    ],
+    "objectMetadataList" : [
+      [
+        "AA6B9D3C-B738-4E84-AA0D-F20A10936D35",
+        "Root",
+        "HotDog"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AA6B9D3C-B738-4E84-AA0D-F20A10936D35",
+        "Root",
+        "Cheeseburger"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AA6B9D3C-B738-4E84-AA0D-F20A10936D35",
+        "Root",
+        "PizzaSlice"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AA6B9D3C-B738-4E84-AA0D-F20A10936D35",
+        "Root",
+        "FrenchFries"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AA6B9D3C-B738-4E84-AA0D-F20A10936D35",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
